@@ -2,8 +2,80 @@
 <html>
 <head>
 	<title>Php_MySql_Learning_Dump</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	body{
+		background-color:rgb(1, 91, 126);
+		height: 100vh;
+		width: 100vw;
+		overflow: auto;
+	}
+
+	.Card_Short{
+background: rgb(30, 54, 88);
+color: 	rgb(255, 255, 255);
+padding: 10px;
+box-shadow: 2px 2px 2px rgb(108, 212, 215);
+border-radius: 10px;
+font-size: 2rem;
+text-align: center;
+margin: 10px;
+width: 25vw;
+cursor: pointer;		
+	}
+
+.Card_Long{
+position: fixed;
+	top:5vh;	
+	left: 5vw;
+		display: inline-block;
+		background-color: rgb(244, 119, 97);
+		height: 90vh;
+		width: 90vw;
+		font-size: 1.5rem;		
+}
+
+.hide{
+	display: none;
+}
+</style>
+
+
 </head>
-<body>
-hellooo,.....
+<body onload="trigger()">
+
+
+<div class="Card_Short" vat-id="MSD_1">Php...</div>
+<div class="Card_Long hide" id="Virat_1">Php</div>
+
+<script type="text/javascript">
+	
+function  trigger(){
+	// alert("j")
+	const Head = document.querySelectorAll(".Card_Short");
+	const SubStr = document.querySelectorAll(".Card_Long");
+   Head.forEach(elem => {
+    elem.addEventListener("click", start);
+    });
+      SubStr.forEach(elem => {
+    elem.addEventListener("click", hider);
+    });
+   // alert(Head.length)
+}
+
+function start(){
+
+	document.getElementById(event.target.getAttribute("vat-id").replace("MSD","Virat")).classList.toggle("hide")
+}
+
+function hider(){
+	event.target.classList.toggle("hide")
+}
+
+</script>
 </body>
 </html>
