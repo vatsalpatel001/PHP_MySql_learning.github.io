@@ -25,7 +25,8 @@ font-size: 2rem;
 text-align: center;
 margin: 10px;
 width: 25vw;
-cursor: pointer;		
+cursor: pointer;
+display: inline-block;		
 	}
 
 .Card_Long{
@@ -33,10 +34,13 @@ position: fixed;
 	top:5vh;	
 	left: 5vw;
 		display: inline-block;
-		background-color: rgb(244, 119, 97);
+		/*background-color: rgb(244, 119, 97);*/
+		background-color: lightgray;
 		height: 90vh;
 		width: 90vw;
-		font-size: 1.5rem;		
+		font-size: 1.5rem;	
+		padding: 10px;
+		overflow: auto;	
 }
 
 .hide{
@@ -49,8 +53,47 @@ position: fixed;
 <body onload="trigger()">
 
 
-<div class="Card_Short" vat-id="MSD_1">Php...</div>
-<div class="Card_Long hide" id="Virat_1">Php</div>
+<div class="Card_Short" vat-id="MSD_1">Scripting vs Programming Languages</div>
+<div class="Card_Long hide" id="Virat_1"><br><br>&#8594; scripting languages do not require the compilation step and are rather interpreted.
+
+<br><br>&#8594; C program needs to be compiled before running whereas normally, a scripting language like JavaScript or PHP need not be compiled.
+
+<br><br>&#8594; compiled programs run faster than interpreted programs because they are first converted native machine code.
+
+<br><br>&#8594; Also, compilers read and analyze the code only once, and report the errors collectively that the code might have, but the interpreter will read and analyze the code statements each time it meets them and halts at that very instance if there is some error. 
+
+<br><br>&#8594; we can design a compiler for JavaScript and use it as a non-scripting(compiled language). A live example of this is V8, the JavaScript engine of Google Chrome, which compiles the JavaScript code into machine code, rather than interpreting it.
+
+
+<br><br>&#8594; Some scripting languages traditionally used without an explicit compilation step are JavaScript, PHP, Python, VBScript.
+ 
+<br><br>&#8594; Some programming languages traditionally used with an explicit compilation step are C, C++.
+
+</div>
+
+
+
+<div class="Card_Short" vat-id="MSD_2">Php?...</div>
+<div class="Card_Long hide" id="Virat_2">
+	
+	<br><br>&#8594;PHP stands for Hypertext Pre-processor, that earlier stood for Personal Home Pages.
+
+	<br><br>&#8594;PHP is an open-source
+
+	 <br><br>&#8594;object-oriented scripting language
+
+	 <br><br>&#8594;created by Danish-Canadian programmer Rasmus Lerdorf in 1994.
+
+	  <br><br>&#8594;Alternative to competitors such as Microsoft's ASP.
+
+	  <br><br>&#8594;It is embedded in HTML.
+
+	  <br><br>&#8594;It is used to manage dynamic content, databases, session tracking,etc,..
+
+	  <br><br>&#8594;PHP scripts can only be interpreted on a server that has PHP installed.
+
+	 <br><br>&#8594; Almost 8 out of every 10 websites that you visit on the Internet are using PHP in some way.
+</div>
 
 <script type="text/javascript">
 	
