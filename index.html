@@ -176,12 +176,117 @@ position: fixed;
 
 
 	<br><br>&#8594; <a href="https://www.apachefriends.org/download.html">Download,..</a>
+	</div>
+<div class="Card_Short" vat-id="MSD_10">phpMyAdmin XAMPP?,..</div>
+<div class="Card_Long hide" id="Virat_10">
+	<br><br>&#8594; lets you handle the administration of MySQL,
+	<br><br>&#8594; You can easily manage the database through a graphic user interface
+
+</div>
+
+
+
 </div>
 <div class="Card_Short" vat-id="MSD_10">CodeIgniter?,..</div>
 <div class="Card_Long hide" id="Virat_10">
 <br><br>&#8594; CodeIgniter is a powerful PHP framework
 
 </div>
+
+<div class="Card_Short" vat-id="MSD_11">connection with database,..</div>
+<div class="Card_Long hide" id="Virat_11">
+
+<br><br>&#8594; Go to http://localhost/phpmyadmin/
+<br><br>&#8594; Create database : Demo
+
+
+<br><br>&#8594; <textarea>
+	<?php 
+$serverName="localhost";
+$userName="root";
+$passWord="";
+$Db ="Demo";
+
+$conn =mysqli_connect($serverName,$userName,$passWord,$Db);
+if($conn){
+	echo "Connected Sucessfully";
+}
+else{
+	die("Not connected");
+}
+
+ ?>
+</textarea>
+
+
+
+</div>
+
+
+<div class="Card_Short" vat-id="MSD_12">die() & sleep() functions,..</div>
+<div class="Card_Long hide" id="Virat_12">
+
+
+
+<br><br>&#8594; <textarea>
+	<?php 
+// initial timings 
+echo date('h:i:s') . "\n"; 
+  
+// halt for 5 seconds 
+sleep(5); 
+  
+// timings after halt 
+echo date('h:i:s'); 
+?> 
+</textarea>
+
+
+<br><br>&#8594; The die() is an inbuilt function in PHP.
+<br><br>&#8594; It is used to print message and exit from the current php script.
+<br><br>&#8594; It is equivalent to exit() function in PHP.
+
+</div>
+
+
+<div class="Card_Short" vat-id="MSD_13">MySql Commad</div>
+<div class="Card_Long hide" id="Virat_13">
+
+<br><br>&#8594; To create Database : &#8594; <b>create Database Demo</b>
+<br><br>&#8594; Demo is Database name, 
+<br><br>&#8594; Create and databse are keyword, &#8594; it is not caseSensative,
+
+
+
+</div>
+
+
+<div class="Card_Short" vat-id="MSD_14">MySQL Workbench,...</div>
+<div class="Card_Long hide" id="Virat_14">
+
+<br><br>&#8594; MySQL Workbench is a visual database design tool
+<a href="https://dev.mysql.com/downloads/workbench/">Download,...</a>
+
+</div>
+
+
+
+<div class="Card_Short" vat-id="MSD_15">To Change connection username and password</div>
+<div class="Card_Long hide" id="Virat_15">
+
+
+C:\xampp\phpMyAdmin\config.inc.php
+
+</div>
+
+
+
+
+
+
+
+
+
 
 
 <script type="text/javascript">
