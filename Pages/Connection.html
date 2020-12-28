@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Php_MySql_Learning_Dump</title>
+<style type="text/css">
+		*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		font-size: 15px;
+	}
+
+@media screen and (max-width: 992px) {
+ *{
+			font-size: 10px;
+	}
+}
+
+	body{
+		background-color:rgb(1, 91, 126);
+		height: 100vh;
+		width: 100vw;
+		overflow: auto;
+		text-align: center;
+		padding: 1vw;
+			}
+
+	.Card_Short{
+background: rgb(30, 54, 88);
+color: 	rgb(255, 255, 255);
+padding: 0.5vw;
+box-shadow: 2px 2px 2px rgb(108, 212, 215);
+border-radius: 1vw;
+font-size: 2rem;
+text-align: center;
+margin: 0.5vw;
+width: 30vw;
+height: 25vh;
+line-height: 20vh;
+cursor: pointer;
+display: inline-block;	
+vertical-align: middle;
+/*height: 100px;*/
+white-space: nowrap; 
+padding: 2vw;
+  overflow: hidden;
+  text-overflow: ellipsis; 	
+	}
+
+.Card_Long{
+position: fixed;
+	top:5vh;	
+	left: 5vw;
+		display: inline-block;
+		/*background-color: rgb(244, 119, 97);*/
+		background-color: white;
+		/*background-color: rgb(108, 212, 215);*/
+		height: 90vh;
+		width: 90vw;
+		font-size: 1.5rem;	
+		padding: 1vw;
+		overflow: auto;	
+		text-align: left;
+		border-radius: 2vw;
+		/*color: rgb(30, 54, 88);*/
+}
+
+.hide{
+	display: none;
+}
+
+.Part{
+	width: 48%;
+}
+
+</style>
+
+
+</head>
+<body onload="trigger()">
+
+
+<div class="Card_Short">connection with database,..</div>
+<div class="Card_Long">
+
+<br><br>&#8594; Go to http://localhost/phpmyadmin/
+<br><br>&#8594; Create database : Demo
+
+
+<br><br>&#8594; <textarea>
+	<?php 
+$serverName="localhost";
+$userName="root";
+$passWord="";
+$Db ="Demo";
+
+$conn =mysqli_connect($serverName,$userName,$passWord,$Db);
+if($conn){
+	echo "Connected Sucessfully";
+}
+else{
+	die("Not connected");
+}
+
+ ?>
+</textarea>
+
+
+
+</div>
+<div class="Card_Short">How to check current database,...</div>
+<div class="Card_Long">
+
+	CMD: select DATABASE();
+	
+</div>
+
+<div class="Card_Short">die() & sleep() functions,..</div>
+<div class="Card_Long">
+
+
+
+<br><br>&#8594; <textarea>
+	<?php 
+// initial timings 
+echo date('h:i:s') . "\n"; 
+  
+// halt for 5 seconds 
+sleep(5); 
+  
+// timings after halt 
+echo date('h:i:s'); 
+?> 
+</textarea>
+
+
+<br><br>&#8594; The die() is an inbuilt function in PHP.
+<br><br>&#8594; It is used to print message and exit from the current php script.
+<br><br>&#8594; It is equivalent to exit() function in PHP.
+
+</div>
+
+
+<div class="Card_Short">MySql Commad</div>
+<div class="Card_Long">
+
+<br><br>&#8594; To create Database : &#8594; <b>create Database Demo</b>
+<br><br>&#8594; Demo is Database name, 
+<br><br>&#8594; Create and databse are keyword, &#8594; it is not caseSensative,
+
+</div>
+
+
+
+<script type="text/javascript">
+	
+function  trigger(){
+	// alert("j")
+	const Head = document.querySelectorAll(".Card_Short");
+	const SubStr = document.querySelectorAll(".Card_Long");
+   Head.forEach((elem,index,arr) => {
+    arr[index].setAttribute("vat-id","MSD_"+index)
+    elem.addEventListener("click", start);
+    });
+      SubStr.forEach((elem,index,arr) => {
+      	 arr[index].setAttribute("id","Virat_"+index);
+      	 arr[index].setAttribute("class","Card_Long hide");
+    elem.addEventListener("dblclick", hider);
+    });
+   // alert(Head.length)
+}
+
+function start(){
+
+	document.getElementById(event.target.getAttribute("vat-id").replace("MSD","Virat")).classList.toggle("hide")
+}
+
+function hider(){
+	event.target.classList.toggle("hide")
+}
+
+</script>
+</body>
+</html>
