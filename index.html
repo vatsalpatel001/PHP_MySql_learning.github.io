@@ -3,31 +3,48 @@
 <head>
 	<title>Php_MySql_Learning_Dump</title>
 <style type="text/css">
-	*{
+		*{
 		padding: 0;
 		margin: 0;
 		box-sizing: border-box;
+		font-size: 15px;
 	}
+
+@media screen and (max-width: 992px) {
+ *{
+			font-size: 10px;
+	}
+}
+
 	body{
 		background-color:rgb(1, 91, 126);
 		height: 100vh;
 		width: 100vw;
 		overflow: auto;
 		text-align: center;
-	}
+		padding: 1vw;
+			}
 
 	.Card_Short{
 background: rgb(30, 54, 88);
 color: 	rgb(255, 255, 255);
-padding: 10px;
+padding: 0.5vw;
 box-shadow: 2px 2px 2px rgb(108, 212, 215);
-border-radius: 10px;
+border-radius: 1vw;
 font-size: 2rem;
 text-align: center;
-margin: 10px;
-width: 20vw;
+margin: 0.5vw;
+width: 30vw;
+height: 25vh;
+line-height: 20vh;
 cursor: pointer;
-display: inline-block;		
+display: inline-block;	
+vertical-align: middle;
+/*height: 100px;*/
+white-space: nowrap; 
+padding: 2vw;
+  overflow: hidden;
+  text-overflow: ellipsis; 	
 	}
 
 .Card_Long{
@@ -36,18 +53,26 @@ position: fixed;
 	left: 5vw;
 		display: inline-block;
 		/*background-color: rgb(244, 119, 97);*/
-		background-color: lightgray;
+		background-color: white;
+		/*background-color: rgb(108, 212, 215);*/
 		height: 90vh;
 		width: 90vw;
 		font-size: 1.5rem;	
-		padding: 10px;
+		padding: 1vw;
 		overflow: auto;	
 		text-align: left;
+		border-radius: 2vw;
+		/*color: rgb(30, 54, 88);*/
 }
 
 .hide{
 	display: none;
 }
+
+.Part{
+	width: 48%;
+}
+
 </style>
 
 
@@ -55,8 +80,8 @@ position: fixed;
 <body onload="trigger()">
 
 
-<div class="Card_Short" vat-id="MSD_1">Scripting vs Programming Languages</div>
-<div class="Card_Long hide" id="Virat_1"><br><br>&#8594; scripting languages do not require the compilation step and are rather interpreted.
+<div class="Card_Short">Scripting vs Programming Languages</div>
+<div class="Card_Long"><br><br>&#8594; scripting languages do not require the compilation step and are rather interpreted.
 
 <br><br>&#8594; C program needs to be compiled before running whereas normally, a scripting language like JavaScript or PHP need not be compiled.
 
@@ -75,8 +100,8 @@ position: fixed;
 
 
 
-<div class="Card_Short" vat-id="MSD_2">Php?...</div>
-<div class="Card_Long hide" id="Virat_2">
+<div class="Card_Short">Php?...</div>
+<div class="Card_Long">
 	
 	<br><br>&#8594;PHP stands for Hypertext Pre-processor, that earlier stood for Personal Home Pages.
 
@@ -99,8 +124,8 @@ position: fixed;
 
 
 
-<div class="Card_Short" vat-id="MSD_3">SQL Vs NoSql</div>
-<div class="Card_Long hide" id="Virat_3">
+<div class="Card_Short">SQL Vs NoSql</div>
+<div class="Card_Long">
 	
 	<br><br>&#8594; NoSQL databases have dynamic schemas for unstructured data.
 
@@ -119,15 +144,15 @@ position: fixed;
 
 
 
-<div class="Card_Short" vat-id="MSD_4">RDBMS?...</div>
-<div class="Card_Long hide" id="Virat_4">
+<div class="Card_Short">RDBMS?...</div>
+<div class="Card_Long">
 <br><br>&#8594; Stands for "Relational Database Management System." 
 <br><br>&#8594; a database that stores data in a structured format, using rows and columns.
 
 <br><br>&#8594; the most popular of these have been Microsoft SQL Server, Oracle Database, MySQL, and IBM DB2.
 </div>
-<div class="Card_Short" vat-id="MSD_5">SQL VS MySql</div>
-<div class="Card_Long hide" id="Virat_5">
+<div class="Card_Short">SQL VS MySql</div>
+<div class="Card_Long">
 <br><br>&#8594;	SQL stands for Structured Query Language, and it is a programming language designed for querying data from a database.
 
 <br><br>&#8594;	 MySQL is a relational database management system, which is a completely different thing.
@@ -135,15 +160,15 @@ position: fixed;
 <br><br>&#8594; MySQL is an RDBMS tostore, retrieve, modify and administrate a database usingSQL.
 </div>
 
-<div class="Card_Short" vat-id="MSD_7">MySQL?...</div>
-<div class="Card_Long hide" id="Virat_7">
+<div class="Card_Short">MySQL?...</div>
+<div class="Card_Long">
 	<br><br>&#8594; MySQL is an open-source relational database management system.
 
 	<br><br>&#8594; Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language
 </div>
 
-<div class="Card_Short" vat-id="MSD_6">GNU General Public License</div>
-<div class="Card_Long hide" id="Virat_6">
+<div class="Card_Short">GNU General Public License</div>
+<div class="Card_Long">
 	<br><br>&#8594; GNU is an extensive collection of free software, which can be used as an operating system or can be used in parts with other operating systems.
 
 
@@ -157,16 +182,16 @@ position: fixed;
 
 
 </div>
-<div class="Card_Short" vat-id="MSD_8">Apache HTTP Server,..</div>
-<div class="Card_Long hide" id="Virat_8">
+<div class="Card_Short">Apache HTTP Server,..</div>
+<div class="Card_Long">
 	<br><br>&#8594;	The Apache HTTP Server,.
 
 	<br><br>&#8594;	ts job is to establish a connection between a server and the browsers of website visitors (Firefox, Google Chrome, Safari, etc.) while delivering files back and forth between them (client-server structure).
 
 </div>
 
-<div class="Card_Short" vat-id="MSD_9">XAMPP?,..</div>
-<div class="Card_Long hide" id="Virat_9">
+<div class="Card_Short">XAMPP?,..</div>
+<div class="Card_Long">
 	
 	<br><br>&#8594;	XAMPP is a software distribution which provides the Apache web server, MySQL database (actually MariaDB), Php and Perl (as command-line executables and Apache modules) all in one package.
 
@@ -177,8 +202,8 @@ position: fixed;
 
 	<br><br>&#8594; <a href="https://www.apachefriends.org/download.html">Download,..</a>
 	</div>
-<div class="Card_Short" vat-id="MSD_10">phpMyAdmin XAMPP?,..</div>
-<div class="Card_Long hide" id="Virat_10">
+<div class="Card_Short">phpMyAdmin XAMPP?,..</div>
+<div class="Card_Long">
 	<br><br>&#8594; lets you handle the administration of MySQL,
 	<br><br>&#8594; You can easily manage the database through a graphic user interface
 
@@ -187,14 +212,14 @@ position: fixed;
 
 
 </div>
-<div class="Card_Short" vat-id="MSD_10">CodeIgniter?,..</div>
-<div class="Card_Long hide" id="Virat_10">
+<div class="Card_Short">CodeIgniter?,..</div>
+<div class="Card_Long">
 <br><br>&#8594; CodeIgniter is a powerful PHP framework
 
 </div>
 
-<div class="Card_Short" vat-id="MSD_11">connection with database,..</div>
-<div class="Card_Long hide" id="Virat_11">
+<div class="Card_Short">connection with database,..</div>
+<div class="Card_Long">
 
 <br><br>&#8594; Go to http://localhost/phpmyadmin/
 <br><br>&#8594; Create database : Demo
@@ -223,8 +248,8 @@ else{
 </div>
 
 
-<div class="Card_Short" vat-id="MSD_12">die() & sleep() functions,..</div>
-<div class="Card_Long hide" id="Virat_12">
+<div class="Card_Short">die() & sleep() functions,..</div>
+<div class="Card_Long">
 
 
 
@@ -249,8 +274,8 @@ echo date('h:i:s');
 </div>
 
 
-<div class="Card_Short" vat-id="MSD_13">MySql Commad</div>
-<div class="Card_Long hide" id="Virat_13">
+<div class="Card_Short">MySql Commad</div>
+<div class="Card_Long">
 
 <br><br>&#8594; To create Database : &#8594; <b>create Database Demo</b>
 <br><br>&#8594; Demo is Database name, 
@@ -261,8 +286,8 @@ echo date('h:i:s');
 </div>
 
 
-<div class="Card_Short" vat-id="MSD_14">MySQL Workbench,...</div>
-<div class="Card_Long hide" id="Virat_14">
+<div class="Card_Short">MySQL Workbench,...</div>
+<div class="Card_Long">
 
 <br><br>&#8594; MySQL Workbench is a visual database design tool
 <a href="https://dev.mysql.com/downloads/workbench/">Download,...</a>
@@ -271,15 +296,15 @@ echo date('h:i:s');
 
 
 
-<div class="Card_Short" vat-id="MSD_15">To Change connection username and password</div>
-<div class="Card_Long hide" id="Virat_15">
+<div class="Card_Short">To Change connection username and password</div>
+<div class="Card_Long">
 
 
 C:\xampp\phpMyAdmin\config.inc.php
 
 </div>
-<div class="Card_Short" vat-id="MSD_16">To create Table,..</div>
-<div class="Card_Long hide" id="Virat_16">
+<div class="Card_Short">To create Table,..</div>
+<div class="Card_Long">
 
 <textarea>
 CREATE TABLE table_name (
@@ -303,11 +328,14 @@ function  trigger(){
 	// alert("j")
 	const Head = document.querySelectorAll(".Card_Short");
 	const SubStr = document.querySelectorAll(".Card_Long");
-   Head.forEach(elem => {
+   Head.forEach((elem,index,arr) => {
+    arr[index].setAttribute("vat-id","MSD_"+index)
     elem.addEventListener("click", start);
     });
-      SubStr.forEach(elem => {
-    elem.addEventListener("click", hider);
+      SubStr.forEach((elem,index,arr) => {
+      	 arr[index].setAttribute("id","Virat_"+index);
+      	 arr[index].setAttribute("class","Card_Long hide");
+    elem.addEventListener("dblclick", hider);
     });
    // alert(Head.length)
 }
