@@ -2,28 +2,20 @@
 <html>
 <head>
 	<title>Php_MySql_Learning_Dump</title>
+	<style type="text/css">
+		.dbConn{
+			background-color: yellow;		
+		}
+	</style>
 </head>
 <body>
-<?php 
-echo "Hello this is my first commit!";
+<?php
+echo "<br>Hello this is my first commit!";
 
  ?>
-<?php 
-$serverName="localhost";
-$userName="root";
-$passWord="";
-$Db ="Demo";
-
-$conn =mysqli_connect($serverName,$userName,$passWord,$Db);
-if($conn){
-	echo "Connected Sucessfully";
-}
-else{
-	die("Not connected");
-}
-
- ?>
-
+ <div class="dbConn">
+<?php require 'conn.php'; ?>
+</div>
 
 
 </body>
