@@ -23,3 +23,16 @@ function start(){
 function hider(){
 	event.target.classList.toggle("hide")
 }
+
+
+const textarea = document.querySelectorAll("textarea");
+   textarea.forEach((elem,index,arr) => {
+      var textareaLength = arr[index].value.length*0.15;
+
+    arr[index].setAttribute("style","height:"+textareaLength +"%")
+    
+    });
+
+
+
+

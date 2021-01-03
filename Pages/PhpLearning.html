@@ -9,7 +9,68 @@
 <body onload="trigger()">
 
 
-<div class="Card_Short">Include and require Statements</div>
+<div class="Card_Short">Basic</div>
+<div class="Card_Long">
+In PHP, variable and constant names are case sensitive, while function names are not.
+PHP statements end with a semicolon (;).
+</div>
+
+<div class="Card_Short">Variable</div>
+<div class="Card_Long">
+A variable starts with the $ sign, followed by the name of the variable
+A variable name must start with a letter or the underscore character
+A variable name cannot start with a number
+A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+Variable names are case-sensitive ($age and $AGE are two different variables)
+
+</div>
+
+<div class="Card_Short">concatenate two strings together</div>
+<div class="Card_Long">
+Use the concatenation operator . (and .=)
+
+<textarea>
+	$data1 = "the color is";
+$data2 = "red";
+$result = $data1 . ' ' . $data2;
+</textarea>
+<textarea>
+	$data1 = "the color is ";
+$data1 .= "red"
+</textarea>
+<textarea>
+	echo 'Welcome ', $name, '!';
+</textarea>
+<textarea>
+	$name = "PHPPOT";
+echo "I am reading $name"; // output: I am reading PHPPOT
+echo 'I am reading $name'; // output: I am reading $name
+</textarea>
+
+</div>
+
+
+	<div class="Card_Short">echo and print</div>
+<div class="Card_Long">
+Eco is faster than print,
+
+<textarea>
+	echo "<br>" . "my name is lakhan" . "<br>"; //no error
+echo "<br>" , "my name is lakhan" , "<br>"; //no error
+
+</textarea>
+<textarea>
+	print "<br>" . "my name is lakhan" . "<br>"; //no error
+print "<br>" , "my name is lakhan" , "<br>"; //error
+
+</textarea>
+
+
+
+</div>
+
+
+	<div class="Card_Short">Include and require Statements</div>
 <div class="Card_Long">
 The include (or require) statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement.
 </div>
@@ -42,7 +103,7 @@ require 'filename';
 </html>
 </textarea>
 </div>
-<div class="Card_Short">isset()</div>
+	<div class="Card_Short">isset()</div>
 <div class="Card_Long">
 	Check whether a variable is empty. Also check whether the variable is set/declared:
 	<textarea>
@@ -61,6 +122,25 @@ if (isset($b)) {
 ?>
 	</textarea>
 	Note: If multiple variables are supplied, then this function will return true only if all of the variables are set.
+</div>
+<div class="Card_Short">Prevent data reinsert</div>
+<div class="Card_Long">
+	stop inserting data in the database when refreshing the page
+<textarea>
+	if (isset($_POST['submit'])) 
+{
+  $user= $_POST['username'];
+  $email = $_POST['useremail'];
+  $pass= $_POST['password']; 
+
+  mysql_query("INSERT INTO table (username, useremail, email) VALUES(`$username','$useremail','$email')");
+
+}
+//best outside the if statement so user isn't stuck on a white blank page.
+header("location: landing_page.php");
+exit;
+</textarea>
+
 </div>
 
 <script type="text/javascript" src="../script.js"></script>

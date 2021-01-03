@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Php_MySql_Learning_Dump</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+
+</head>
+<body onload="trigger()">
+
+
+<div class="Card_Short">Update Primery Key</div>
+<div class="Card_Long">
+Fixing gaps in mysql table row id after we delete some of them,
+
+
+
+You can but be carefull of other tables using this primary key as a foreign key
+<textarea>
+SET @count = 0;
+UPDATE table SET table.id = @count:= @count + 1;
+</textarea>
+this will update the id column of the table table ... you then need to reset the auto_increment :
+<textarea>
+ALTER TABLE table AUTO_INCREMENT = 1;
+</textarea>
+</div>
+
+<script type="text/javascript" src="../script.js"></script>
+</body>
+</html>
