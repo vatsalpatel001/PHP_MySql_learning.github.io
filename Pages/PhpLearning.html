@@ -142,6 +142,68 @@ exit;
 </textarea>
 
 </div>
+<div class="Card_Short">Javascript to php </div>
+<div class="Card_Long">
+<textarea>
+	<?php
+ $htmlString ="helloe"
+?>
+	<script type="text/javascript">
+	var htmlString="<?php echo $htmlString; ?>";		
+	</script>
+</textarea>
+
+</div>
+<div class="Card_Short">Php to javascript </div>
+<div class="Card_Long">
+<textarea>
+<script type="text/javascript">
+	var x = "heeelllooo"
+</script>
+<?php
+ $tryy = "<script>document.writeln(x);</script>";
+echo $tryy;
+?>
+</textarea>
+
+</div>
+
+<div class="Card_Short">Call Function using varible like eval in javascript </div>
+<div class="Card_Long">
+<textarea>
+
+<?php
+
+// Function without argument
+function func() {
+	echo "hello ";
+}
+
+// Function with argument
+function fun($msg) {
+	echo $msg." ";
+}
+	
+$var = "func";
+$var1 = "fun";
+	
+// 1st method by using variable name
+$var();
+$var1("geek");
+
+echo "\n";
+
+// 2nd method by using php inbuilt
+// function call_user_func()
+call_user_func($var);
+call_user_func($var1, "fun_function");
+
+?>
+
+</textarea>
+
+</div>
+
 
 <script type="text/javascript" src="../script.js"></script>
 </body>
